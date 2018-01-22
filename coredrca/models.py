@@ -1,5 +1,4 @@
 from django.db import models
-from docutils.parsers.rst.directives import flag
 
 class Credito(models.Model):
     d_credito = models.IntegerField()
@@ -8,7 +7,7 @@ class Credito(models.Model):
     a_credito_l = models.IntegerField()
     
     def __str__(self):
-        return self.nome
+        return "Quant. Creditos: "+str(self.a_credito_l)
 
 
 class Departamento(models.Model):
@@ -49,7 +48,7 @@ class Disciplina(models.Model):
     obr_let = models.CharField(max_length = 30)
     status = models.CharField(max_length = 30)
     credito = models.ForeignKey(Credito, null=False, on_delete=models.CASCADE)
-    d_requisito = models.ManyToManyField('Disciplina')
+    d_requisito = models.ManyToManyField('Disciplina', blank=True)
     curso = models.ForeignKey(Curso, null=False, on_delete=models.CASCADE)
     professor = models.ForeignKey(Professor, null=False, on_delete=models.CASCADE)
     

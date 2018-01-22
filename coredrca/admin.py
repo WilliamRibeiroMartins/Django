@@ -1,10 +1,10 @@
 from django.contrib import admin
-from coredrca.models import *
+import coredrca.models as mdl
 
-admin.site.register(Aluno)
-admin.site.register(Credito)
-admin.site.register(Disciplina)
-admin.site.register(Secretaria)
-admin.site.register(Professor)
-admin.site.register(Curso)
-admin.site.register(Departamento)
+admin.site.register(mdl.Aluno)
+admin.site.register(mdl.Credito)
+admin.site.register(mdl.Disciplina)
+admin.site.register(mdl.Secretaria)
+admin.site.register(mdl.Professor)
+admin.site.register(mdl.Curso)
+admin.site.register(mdl.Departamento)
