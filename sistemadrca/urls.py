@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.conf.urls import include, url
 
 urlpatterns = [
-    url('admin/', include(admin.site.urls)),
-    url(r'^', include('coredrca.urls')),
+    url('admin/', admin.site.urls),
+    url(r'^coredrca/', include('coredrca.urls')),
 ]

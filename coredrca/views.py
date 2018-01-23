@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from boto.connection import HTTPResponse
+from django.http.response import HttpResponse
 
 # Create your views here.
 
-def artigo(request):
-    return HTTPResponse('Ola mundo! Estamos no ano de ')
+def artigo(request, ano):
+    return HttpResponse('Ola mundo! Estamos no ano de ' + ano + '!!')
