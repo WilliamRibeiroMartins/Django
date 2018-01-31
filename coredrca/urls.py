@@ -3,6 +3,6 @@ from coredrca import views
 
 
 urlpatterns = [
-    url(r'^artigo/(?P<ano>[0-9]{4})/$', views.artigo),
-    url(r'^', views.home),
+    url(r'^$', views.home),
+    url(r'^alunos$', views.alunos),
 ]
